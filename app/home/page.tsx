@@ -109,6 +109,48 @@ function HomePage () {
           <CardContainer />
         </div>
       </section>
+      
+
+
+<section className="relative overflow-hidden py-20 px-6 text-center  bg-accent/30">
+  
+  <div className="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-primary/8 pointer-events-none" />
+  <div className="absolute -bottom-10 -left-10 w-52 h-52 rounded-full bg-accent/15 pointer-events-none" />
+
+  <div className="relative max-w-xl mx-auto">
+    <span className="inline-block text-xs font-semibold tracking-widest uppercase text-primary border border-primary/30 rounded-full px-4 py-1.5 mb-5">
+      ✦ Únete a AURA
+    </span>
+
+    <h2 className="text-4xl font-bold text-foreground mb-4 leading-tight">
+      ¿Lista para <span className="text-primary italic font-light">brillar</span>?
+    </h2>
+
+    <p className="text-foreground/60 text-base leading-relaxed mb-8">
+      Creá tu cuenta hoy y recibí un 10% de descuento en tu primera compra.
+      Accedé a ofertas exclusivas y productos pensados para vos.
+    </p>
+
+    <div className="flex flex-wrap gap-3 justify-center mb-5">
+      <Link
+        href="/register"
+        className="bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-full font-semibold text-sm shadow-lg shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5"
+      >
+        Crear cuenta gratis
+      </Link>
+      <Link
+        href="#productos"
+        className="bg-surface border border-border text-primary px-8 py-3.5 rounded-full font-semibold text-sm hover:shadow-sm transition-all duration-300"
+      >
+        Ver productos
+      </Link>
+    </div>
+
+    <p className="text-xs text-foreground/40">
+      Sin cargo de membresía · Cancelá cuando quieras · Envíos gratis 🌸
+    </p>
+  </div>
+</section>
 
     </main>
   );

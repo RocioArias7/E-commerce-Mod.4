@@ -70,14 +70,13 @@ function CartPage() {
           )}
         </div>
 
-        {/* Resumen del pedido */}
         <div className="sticky top-24 rounded-2xl border border-border bg-surface p-6 shadow-sm h-fit">
           <h3 className="text-lg font-bold text-foreground">Resumen del pedido</h3>
 
           <div className="mt-4 space-y-3 border-b border-border pb-4">
             {cartItems.map((item) => (
               <div key={item.id} className="flex justify-between text-sm text-muted">
-                <span>{item.name}</span> {/* 👈 nombre del producto */}
+                <span>{item.name}</span> {/*  nombre del producto */}
                 <span className='font-medium text-primary'>${item.price.toLocaleString("es-CO")}</span> {/* 👈 precio */}
               </div>
             ))}
@@ -91,7 +90,7 @@ function CartPage() {
           <div className="mt-4 flex justify-between">
             <span className="text-lg font-bold text-foreground">Total</span>
             <span className="text-2xl font-bold text-primary">
-              ${getTotal().toLocaleString("es-CO")} {/* 👈 suma de todos los precios */}
+              ${getTotal().toLocaleString("es-CO")} {/* suma de todos los precios */}
             </span>
           </div>
 

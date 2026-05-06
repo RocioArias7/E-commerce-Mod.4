@@ -4,7 +4,7 @@ import Link from "next/link"
 function Footer() {
   return (
  <footer className="bg-[#3a2d2f] text-white mt-10">
-  <div className="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-5 gap-8">
+  <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-16">
 
     {/* LOGO / INFO */}
     <div>
@@ -12,17 +12,17 @@ function Footer() {
         
         ✦ Aura Skincare
       </h2>
-      <p className="text-sm text-gray-300 leading-relaxed">
+      <p className="text-lg text-gray-300 leading-relaxed">
         Tu tienda de confianza para productos de belleza y cuidado personal.
       </p>
     </div>
 
     {/* NAVEGACIÓN */}
     <div>
-      <h3 className="font-semibold mb-3 text-accent">
+      <h3 className="font-semibold text-lg mb-3 text-accent">
         Navegación
       </h3>
-      <ul className="space-y-2 text-sm text-gray-300">
+      <ul className="space-y-2 text-lg text-gray-300">
         <li> <Link href="/home" className="hover:text-background cursor-pointer">Inicio</Link></li>
         <li> <Link href="/#products" className="hover:text-background cursor-pointer">Productos</Link></li>
         <li> <Link href="/cart" className="hover:text-background cursor-pointer">Carrito</Link></li>
@@ -31,10 +31,10 @@ function Footer() {
 
     {/* CUENTA */}
     <div>
-      <h3 className="font-semibold mb-3 text-accent">
+      <h3 className="font-semibold text-lg mb-3 text-accent">
         Cuenta
       </h3>
-      <ul className="space-y-2 text-sm text-gray-300">
+      <ul className="space-y-2 text-lg text-gray-300">
         <li> <Link href="/login" className="hover:text-background cursor-pointer">Iniciar sesión</Link></li>
         <li> <Link href="/register" className="hover:text-background cursor-pointer">Registrarse</Link></li>
         <li> <Link href="/dashboard" className="hover:text-background cursor-pointer">Mi cuenta</Link></li>
@@ -43,10 +43,10 @@ function Footer() {
 
     {/* CONTACTO */}
     <div>
-      <h3 className="font-semibold mb-3 text-accent">
+      <h3 className="font-semibold text-lg mb-3 text-accent">
         Contacto
       </h3>
-      <ul className="space-y-2 text-sm text-gray-300">
+      <ul className="space-y-2 text-lg text-gray-300">
         <li>soporte@aura.com</li>
         <li>+54 9 11 1234 5678</li>
         <li>Santa Fe, Argentina</li>
