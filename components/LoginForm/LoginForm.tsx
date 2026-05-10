@@ -12,6 +12,7 @@ function LoginForm() {
     validationSchema: loginValidationSchema,
     onSubmit: async (values) => {
       const responseLogin = await loginUser(values);
+      alert('Inicio de sesión exitoso');
       setDataUser(responseLogin); 
         
     },

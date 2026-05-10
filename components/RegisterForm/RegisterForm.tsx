@@ -9,6 +9,7 @@ function RegisterForm() {
     validationSchema: registerValidationSchema,
     onSubmit: async (values, { resetForm}) => {
         await registerUser(values);
+        alert('Registro exitoso');
         resetForm();
     }
   })
