@@ -61,7 +61,7 @@ function DashboardPage() {
    
       
 
-      <Link href="/home" className="rounded-xl text-lg bg-amber-300 text-white py-2 px-4 hover:bg-amber-400 transition">
+      <Link href="/home" className="rounded-xl text-lg bg-pink-500 text-white py-2 px-4 hover:bg-pink-600 transition">
         Ir a comprar
       </Link>
 
