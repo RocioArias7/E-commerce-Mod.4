@@ -6,7 +6,7 @@ function Footer() {
  <footer className="bg-[#3a2d2f] text-white mt-10">
   <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-16">
 
-    {/* LOGO / INFO */}
+    
     <div>
       <h2 className="text-xl font-semibold text-accent mb-2">
         
@@ -17,7 +17,7 @@ function Footer() {
       </p>
     </div>
 
-    {/* NAVEGACIÓN */}
+  
     <div>
       <h3 className="font-semibold text-lg mb-3 text-accent">
         Navegación
@@ -29,7 +29,7 @@ function Footer() {
       </ul>
     </div>
 
-    {/* CUENTA */}
+    
     <div>
       <h3 className="font-semibold text-lg mb-3 text-accent">
         Cuenta
@@ -41,7 +41,7 @@ function Footer() {
       </ul>
     </div>
 
-    {/* CONTACTO */}
+    
     <div>
       <h3 className="font-semibold text-lg mb-3 text-accent">
         Contacto
@@ -55,7 +55,7 @@ function Footer() {
 
   </div>
 
-  {/* LINEA + COPYRIGHT */}
+  
   <div className="border-t border-gray-600 text-center py-4 text-sm text-gray-400">
     © 2026  ✦ Aura Skincare. Todos los derechos reservados.
   </div>

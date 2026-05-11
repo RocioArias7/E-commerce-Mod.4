@@ -3,15 +3,12 @@ import { IUserSession } from "@/interfaces/usersession.interface";
 import {useState, useEffect, useContext} from "react";
 import { createContext } from "react";
 
-
-
 interface AuthContextProps {
     dataUser: IUserSession  | null; //sera el estado que almacena el usuario o NULL
     setDataUser: (dataUser: IUserSession  | null ) => void;
     logout: () => void;
 
 }
-
 
 
 const AuthContext = createContext<AuthContextProps>({
@@ -22,14 +19,16 @@ const AuthContext = createContext<AuthContextProps>({
 
 });
 
+
 interface AuthProviderProps {
     children: React.ReactNode;
 }
 
+
 export const AuthProvider:  React.FC<AuthProviderProps> = ({ children }) => {
 
     const [dataUser,setDataUser] = useState<IUserSession | null>(() => {
-        if (typeof window === "undefined") return null; //linea agregada
+        if (typeof window === "undefined") return null; 
         
         const stored = localStorage.getItem("userSession");
         return stored ? JSON.parse(stored) : null;
@@ -48,5 +47,7 @@ export const AuthProvider:  React.FC<AuthProviderProps> = ({ children }) => {
     {children}
    </AuthContext.Provider>
 };
+
+
 
 export const useAuth = () => useContext(AuthContext);

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-//  NUEVO
+
 interface Order {
   id: number;
   status: string;
@@ -17,11 +17,11 @@ function DashboardPage() {
   const { dataUser, logout } = useAuth();
   const router = useRouter();
 
-  //  NUEVO
+
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
 
-  //  NUEVO
+ 
   useEffect(() => {
     const fetchOrders = async () => {
       if (!dataUser?.token) return;
@@ -44,7 +44,9 @@ function DashboardPage() {
           <h1 className="text-3xl font-bold text-[#3a2d2f]">Mi cuenta</h1>
           <p className="text-gray-500">Gestiona tu perfil, pedidos y preferencias.</p>
         </div>
-        {/* 👇 botón cerrar sesión */}
+      
+
+      
         <button
           onClick={() => {
             logout(); 
@@ -59,13 +61,12 @@ function DashboardPage() {
    
       
 
-      <Link href="/home" className="rounded-xl text-lg bg-pink-500 text-white py-2 px-4 hover:bg-pink-600 transition">
+      <Link href="/home" className="rounded-xl text-lg bg-amber-300 text-white py-2 px-4 hover:bg-amber-400 transition">
         Ir a comprar
       </Link>
 
       <div className="grid md:grid-cols-3 gap-6 mt-6">
 
-        {/* DATOS PERSONALES*/}
         <div className="bg-white rounded-2xl shadow-md p-5 hover:shadow-xl transition">
           <div className="flex items-center gap-2 mb-3 text-pink-500">
             <User size={20} />
@@ -85,7 +86,7 @@ function DashboardPage() {
           </p>
         </div>
 
-        {/* PEDIDOS  */}
+        
         <div className="bg-white rounded-2xl shadow-md p-5 hover:shadow-xl transition">
           <div className="flex items-center gap-2 mb-3 text-pink-500">
             <Package size={20} />
@@ -105,7 +106,7 @@ function DashboardPage() {
           )}
         </div>
 
-        {/* PREFERENCIAS */}
+       
         <div className="bg-white rounded-2xl shadow-md p-5 hover:shadow-xl transition">
           <div className="flex items-center gap-2 mb-3 text-pink-500">
             <Settings size={20} />

@@ -31,8 +31,7 @@ interface CartProviderProps {
 }
 
 
-//Aca traigo el dataUser del AuthContext para saber si el usuario esta logueado o no, 
-// porque si no lo esta, no quiero que pueda agregar productos al carrito, por eso lo traigo aca
+
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     const {dataUser} = useAuth();
@@ -47,9 +46,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     
 });
 
-//si mi cartItems cambia y su longitud es mayor a 0 quiere decir que agregaron algo, por ende lo guardo en el localStorage
-//si no es asi, limpiamos la localStorage (porque si nuestro cartItems no tiene una log mayor a 0 
-//significa que el carrito esta vacio, por ende limpiamos el localStorage pq no hay nada que guardar)
+
 
 useEffect(() => {
     if (cartItems.length > 0) {
@@ -59,27 +56,25 @@ useEffect(() => {
     }
 }, [cartItems]);
 
-//El addToCart recibe un producto, lo agrega a mi cartItems (carrito)
+
 const addToCart = (product: IProduct) => {
     if (!dataUser) {
         alert("Debes iniciar sesión para agregar productos al carrito.");
         return;
     }
 
-//Antes de agregar el producto, verifico si ya existe en el carrito para evitar duplicados
+
     const productDuplicate = cartItems.some((item) => item.id === product.id);
     if (productDuplicate) {
         alert("El producto ya está en el carrito.");
         return;
     }
 
-//Manten lo que ya tienes en el carrito y agrega el nuevo producto, es decir, no borres lo que ya tenias, solo agrega el nuevo producto
 
 
     setCartItems([...cartItems, product]);
 };
 
-//Este removeFromCart me remueve algo de mi carro de compras
 
 const removeFromCart = (productId: number) => {
     setCartItems((prevItems) => 
@@ -89,21 +84,19 @@ const removeFromCart = (productId: number) => {
 };
 
 
-//aca no se recibe nada porque solo va a limpiar el estado, osea va a limpiar el carrito 
 
 const clearCart = () => {
     setCartItems([]);
 
 };
 
-//cuántos productos distintos hay en el carrito 
+
 const cartItemsCount = (): number => {
     return cartItems.length;
 };
 
 
-//Esta funcion me devuelve el total del precio de los productos que tengo en el carrito, es decir,
-//me hace la suma de los precios de los productos que tengo en el carrito
+
 
 const getTotal = (): number => {
     return cartItems.reduce((acc, item) => acc + item.price, 0);

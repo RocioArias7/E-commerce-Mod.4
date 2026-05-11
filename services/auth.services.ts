@@ -2,7 +2,6 @@ import { ILoginFormValues } from "@/interfaces/login.interface";
 import { IRegisterFormValues } from "@/interfaces/register.interface";
 const API_URL = process.env.NEXT_PUBLIC_API_URL
 
-//esta es nuestra peticion al back
 
 export const registerUser = async (userData: IRegisterFormValues) => {
     try {
@@ -25,7 +24,6 @@ export const registerUser = async (userData: IRegisterFormValues) => {
 };
 
 
-//Este va a ser el servicio que se va a encargar de disparar mis logueos 
 export const loginUser = async (userData: ILoginFormValues) => {
    try {
     const responseRegister = await fetch (`${API_URL}/users/login`, {

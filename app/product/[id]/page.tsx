@@ -44,7 +44,7 @@ async function ProductPageById ({ params }: ProductPageByIdProps) {
               />
             </div>
 
-          {/* Info */}
+
           <div className="flex flex-col justify-between space-y-5">
 
             <div>
@@ -57,7 +57,7 @@ async function ProductPageById ({ params }: ProductPageByIdProps) {
               </p>
             </div>
 
-            {/* Precio + stock */}
+           
             <div className="space-y-2">
               <p className="text-lg">
                 <span className="font-medium">Precio: {product.price}</span> 

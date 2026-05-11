@@ -94,7 +94,7 @@ function HomePage () {
         </div>
       </section>
 
-      {/* PRODUCTOS */}
+    
       <section id="productos" className="py-20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
