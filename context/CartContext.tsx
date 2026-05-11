@@ -26,9 +26,6 @@ const CartContext = createContext<CartContextProps>({
 });
 
 
-
-
-
 interface CartProviderProps {
     children: React.ReactNode;
 }
@@ -50,9 +47,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     
 });
 
-//si mi cartItems cambia y su longitud es mayor a 0 quiere decir que guardaron algo, por ende lo guardo en el localStorage
+//si mi cartItems cambia y su longitud es mayor a 0 quiere decir que agregaron algo, por ende lo guardo en el localStorage
 //si no es asi, limpiamos la localStorage (porque si nuestro cartItems no tiene una log mayor a 0 
-// significa que el carrito esta vacio, por ende limpiamos el localStorage pq no hay nada que guardar)
+//significa que el carrito esta vacio, por ende limpiamos el localStorage pq no hay nada que guardar)
 
 useEffect(() => {
     if (cartItems.length > 0) {
@@ -62,7 +59,7 @@ useEffect(() => {
     }
 }, [cartItems]);
 
-//El addToCart que recibe un producto, lo agrega a mi cartItems (carrito)
+//El addToCart recibe un producto, lo agrega a mi cartItems (carrito)
 const addToCart = (product: IProduct) => {
     if (!dataUser) {
         alert("Debes iniciar sesión para agregar productos al carrito.");
