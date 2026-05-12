@@ -19,7 +19,7 @@ function Navbar() {
         
         <Link href="/" className="flex items-center gap-2">
          
-        <div className="text-xl font-semibold text-red-500">
+        <div className="text-xl font-semibold text-foreground">
           ✦ AURA Skincare
         </div>
          </Link>
